@@ -15,7 +15,7 @@ const Products=()=> {
   const [status, setStatus] = useState("");
   const [amount, setAmount] = useState("");
 
-  const getData=(status, amount)=> {
+  const getData=async(status, amount)=> {
   let baseurl = `http://localhost:8080/products`;
   if (status && amount) {
     baseurl += `?status=${status}&_sort=amount&_order=${amount}`;
@@ -25,21 +25,15 @@ const Products=()=> {
     baseurl += `?status=${status}`;
   }
 
-  return fetch(baseurl)
-    .then((res) => res.json())
-    .then((data) => {
-      return data;
-    })
-    .catch((err) => err);
+  const res= await fetch(baseurl);
+  const data =await res.json();
+  console.log(data)
+  setProducts(data);
 }
 
   useEffect(() => {
     setLoading(true);
-    getData(status, amount).then((res) => {
-      setProducts(res);
-      setLoading(false);
-      console.log(res);
-    });
+    getData(status, amount)
   }, [status, amount]);
 
   return (
