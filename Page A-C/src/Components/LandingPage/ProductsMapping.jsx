@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react"
 import React from "react";
 import { greyColor, products } from "../../Utils";
 import ProductCard from "./ProductCard";
@@ -40,3 +40,9 @@ const ProductsMapping=()=> {
 }
 
 export default ProductsMapping;
+
+{/* <Carousel items={products}>
+        {products?.map((item, index) => {
+          return <ProductCard key={index} {...item} />;
+        })}
+      </Carousel> */}

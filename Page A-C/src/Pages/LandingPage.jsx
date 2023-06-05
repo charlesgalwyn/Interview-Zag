@@ -4,8 +4,8 @@ import MenuAvatar from "../Components/LandingPage/MenuAvatar";
 import Welcome from "../Components/LandingPage/Welcome";
 import SearchBar from "../Components/LandingPage/SearchBar";
 import BottomNavbar from "../Components/LandingPage/BottomNavbar";
-import Precentoffer from "../Components/LandingPage/50percent";
 import ProductsMapping from "../Components/LandingPage/ProductsMapping";
+import ProductCarousel from "../Components/LandingPage/ProductCarousel";
 
 const LandingPage=()=> {
   return (
@@ -13,7 +13,7 @@ const LandingPage=()=> {
       <MenuAvatar />
       <Welcome />
       <SearchBar />
-      <Precentoffer/>
+      <ProductCarousel/>
       <ProductsMapping/>
       <BottomNavbar />
     </Box>
