@@ -24,7 +24,7 @@ const ModalComponent=({
 
   const handleEdit = (id) => {
     setLoad(true);
-    fetch(`http://localhost:8080/products/${id}`, {
+    fetch(`https://zag-products.onrender.com/products/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
