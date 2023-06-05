@@ -16,7 +16,7 @@ const Products=()=> {
   const [amount, setAmount] = useState("");
 
   const getData=async(status, amount)=> {
-  let baseurl = `http://localhost:8080/products`;
+  let baseurl = `https://zag-products.onrender.com/products`;
   if (status && amount) {
     baseurl += `?status=${status}&_sort=amount&_order=${amount}`;
   } else if (amount) {
